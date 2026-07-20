@@ -2,7 +2,7 @@
 
 **Live MVP:** https://var-agent-live.basedfox.chatgpt.site  
 **Public source:** https://github.com/water-bear86/var-agent  
-**Demo video:** https://github.com/water-bear86/var-agent/releases/download/v0.1.0/var-agent-demo.webm
+**Demo video:** https://github.com/water-bear86/var-agent/releases/download/v0.1.0/var-agent-capability-demo.mp4
 
 ## One-line pitch
 
