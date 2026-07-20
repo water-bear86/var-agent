@@ -8,6 +8,7 @@ score-feed lag, emits a compact evidence packet, anchors access on Solana, and
 sells the latest packet to other agents over x402.
 
 [**Open the live MVP**](https://var-agent-live.basedfox.chatgpt.site) ·
+[**Watch the 64-second demo**](https://github.com/water-bear86/var-agent/releases/download/v0.1.0/var-agent-demo.webm) ·
 [**Public source**](https://github.com/water-bear86/var-agent)
 
 ![VAR Agent social card](public/og.png)
