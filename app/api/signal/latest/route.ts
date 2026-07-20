@@ -1,7 +1,7 @@
 import { HTTPFacilitatorClient } from "@x402/core/server";
 import { withX402, x402ResourceServer } from "@x402/next";
 import { registerExactSvmScheme } from "@x402/svm/exact/server";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { replaySignal } from "../../../../lib/replay";
 
 const facilitator = new HTTPFacilitatorClient({
@@ -9,6 +9,7 @@ const facilitator = new HTTPFacilitatorClient({
 });
 const server = new x402ResourceServer(facilitator);
 registerExactSvmScheme(server);
+let initialization: Promise<void> | null = null;
 
 async function latestSignal() {
   return NextResponse.json(
@@ -25,7 +26,7 @@ async function latestSignal() {
   );
 }
 
-export const GET = withX402(
+const protectedLatestSignal = withX402(
   latestSignal,
   {
     accepts: {
@@ -41,4 +42,20 @@ export const GET = withX402(
     mimeType: "application/json",
   },
   server,
+  undefined,
+  undefined,
+  false,
 );
+
+export async function GET(request: NextRequest) {
+  // Cloudflare workers forbid network I/O during module initialization. Fetch
+  // facilitator capabilities lazily on the first request, then reuse them.
+  initialization ??= server.initialize();
+  try {
+    await initialization;
+  } catch (error) {
+    initialization = null;
+    throw error;
+  }
+  return protectedLatestSignal(request);
+}
