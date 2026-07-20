@@ -18,6 +18,7 @@ const robotoCondensed = Roboto_Condensed({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://var-agent.vercel.app"),
   title: "VAR Agent — Verifiable market anomaly signals",
   description:
     "An autonomous TxODDS monitor that detects probability shocks and score-feed lag, with Solana-verifiable access and an x402 signal endpoint.",

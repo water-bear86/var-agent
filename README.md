@@ -7,7 +7,7 @@ hackathon. It watches exchange-implied probabilities for abrupt moves and
 score-feed lag, emits a compact evidence packet, anchors access on Solana, and
 sells the latest packet to other agents over x402.
 
-[**Open the live MVP**](https://var-agent-live.basedfox.chatgpt.site) ·
+[**Open the live MVP**](https://var-agent.vercel.app) ·
 [**Watch the narrated 64-second capability demo**](https://github.com/water-bear86/var-agent/releases/download/v0.1.0/var-agent-capability-demo.mp4) ·
 [**Public source**](https://github.com/water-bear86/var-agent)
 
