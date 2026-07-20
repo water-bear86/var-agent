@@ -1,5 +1,8 @@
 # VAR Agent — submission copy
 
+**Live MVP:** https://var-agent-live.basedfox.chatgpt.site  
+**Public source:** https://github.com/water-bear86/var-agent
+
 ## One-line pitch
 
 VAR Agent catches the market move before the score catches up, then sells a

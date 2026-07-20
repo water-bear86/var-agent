@@ -7,6 +7,9 @@ hackathon. It watches exchange-implied probabilities for abrupt moves and
 score-feed lag, emits a compact evidence packet, anchors access on Solana, and
 sells the latest packet to other agents over x402.
 
+[**Open the live MVP**](https://var-agent-live.basedfox.chatgpt.site) ·
+[**Public source**](https://github.com/water-bear86/var-agent)
+
 ![VAR Agent social card](public/og.png)
 
 ## What is real in this MVP
